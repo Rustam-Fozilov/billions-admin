@@ -13908,7 +13908,7 @@ body.dark {
   --ck-color-widget-editable-focus-background: var(--ck-custom-white);
   /* -- Overrides the default colors used by the ckeditor5-link package. ---------------------- */
   --ck-color-link-default: hsl(190, 100%, 75%);
-  --ck-color-base-background: $dark-mode-color-1;
+  --ck-color-base-background: dark-mode-color-1;
 }
 body.dark .preloader {
   background-color: #3b3b41;
