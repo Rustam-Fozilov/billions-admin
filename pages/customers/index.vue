@@ -11,15 +11,70 @@
                                 <i class="bi bi-globe2 small me-2"></i> Dashboard
                             </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Orders</li>
+                        <li class="breadcrumb-item active" aria-current="page">Customers</li>
                     </ol>
                 </nav>
             </div>
 
+            <div class="row g-4 mb-4">
+                <div class="col-md-8">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">New Customers</h6>
+                            <div id="new-customers"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex mb-4">
+                                <h6 class="card-title mb-0">Customer Rating</h6>
+                                <div class="dropdown ms-auto">
+                                    <a href="#" data-bs-toggle="dropdown" class="btn btn-sm" aria-haspopup="true"
+                                       aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a href="#" class="dropdown-item">View Detail</a>
+                                        <a href="#" class="dropdown-item">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="display-6">3.0</div>
+                                <div class="d-flex justify-content-center gap-3 my-3">
+                                    <i class="bi bi-star-fill icon-lg text-warning"></i>
+                                    <i class="bi bi-star-fill icon-lg text-warning"></i>
+                                    <i class="bi bi-star-fill icon-lg text-warning"></i>
+                                    <i class="bi bi-star-fill icon-lg text-muted"></i>
+                                    <i class="bi bi-star-fill icon-lg text-muted"></i>
+                                    <span>(318)</span>
+                                </div>
+                            </div>
+                            <div class="text-muted d-flex align-items-center justify-content-center">
+                        <span class="text-success me-3 d-block">
+                            <i class="bi bi-arrow-up me-1 small"></i>+35
+                        </span> Point from last month
+                            </div>
+                            <div class="row my-4">
+                                <div class="col-md-6 m-auto">
+                                    <div id="customer-rating"></div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-outline-primary btn-icon">
+                                    <i class="bi bi-download"></i> Download Report
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="card">
                 <div class="card-body">
-                    <div class="d-md-flex gap-4 align-items-center">
-                        <div class="d-none d-md-flex">All Orders</div>
+                    <div class="d-md-flex">
                         <div class="d-md-flex gap-4 align-items-center">
                             <form class="mb-3 mb-md-0">
                                 <div class="row g-3">
@@ -51,13 +106,9 @@
                             </form>
                         </div>
                         <div class="dropdown ms-auto">
-                            <div href="" class="btn btn-primary" style="margin-right: 20px">
-                                Create order
-                            </div>
                             <a href="#" data-bs-toggle="dropdown"
                                class="btn btn-primary dropdown-toggle"
-                               aria-haspopup="true" aria-expanded="false">Actions
-                            </a>
+                               aria-haspopup="true" aria-expanded="false">Actions</a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a href="#" class="dropdown-item">Action</a>
                                 <a href="#" class="dropdown-item">Another action</a>
@@ -69,17 +120,18 @@
             </div>
 
             <div class="table-responsive">
-                <table class="table table-custom table-lg mb-0" id="orders">
+                <table class="table table-custom table-lg mb-0" id="customers">
                     <thead>
                     <tr>
                         <th>
-                            <input class="form-check-input select-all" type="checkbox" data-select-all-target="#orders"
-                                   id="defaultCheck1">
+                            <input class="form-check-input select-all" type="checkbox" data-select-all-target="#customers" id="defaultCheck1">
                         </th>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>Photo</th>
+                        <th>Fullname</th>
+                        <th>Email</th>
+                        <th>Country</th>
                         <th>Date</th>
-                        <th>Total</th>
                         <th>Status</th>
                         <th class="text-end">Actions</th>
                     </tr>
@@ -90,13 +142,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#1</a>
                         </td>
-                        <td>Cortie Gemson</td>
-                        <td>May 23, 2021</td>
-                        <td>$239,00</td>
                         <td>
-                            <span class="badge bg-primary">Processing</span>
+                            <div class="avatar avatar-info">
+                                <span class="avatar-text rounded-circle">A</span>
+                            </div>
+                        </td>
+                        <td>Arlan Pond</td>
+                        <td>apond0@nytimes.com</td>
+                        <td>Brazil</td>
+                        <td>1/11/2021</td>
+                        <td>
+                            <span class="badge bg-success">Active</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">
@@ -120,13 +178,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#2</a>
                         </td>
-                        <td>Mathilde Tumilson</td>
-                        <td>May 15, 2021</td>
-                        <td>$650,50</td>
                         <td>
-                            <span class="badge bg-dark">Shipped</span>
+                            <div class="avatar avatar-secondary">
+                                <span class="avatar-text rounded-circle">B</span>
+                            </div>
+                        </td>
+                        <td>Billi Cicero</td>
+                        <td>bcicero1@wiley.com</td>
+                        <td>Indonesia</td>
+                        <td>11/20/2020</td>
+                        <td>
+                            <span class="badge bg-danger">Passive</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">
@@ -150,13 +214,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#3</a>
                         </td>
-                        <td>Audrye Heaford</td>
-                        <td>Apr 24, 2021</td>
-                        <td>$100,00</td>
                         <td>
-                            <span class="badge bg-success">Completed</span>
+                            <div class="avatar avatar-warning">
+                                <span class="avatar-text rounded-circle">T</span>
+                            </div>
+                        </td>
+                        <td>Thorpe Hawksley</td>
+                        <td>thawksley2@senate.gov</td>
+                        <td>France</td>
+                        <td>10/20/2020</td>
+                        <td>
+                            <span class="badge bg-success">Active</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">
@@ -180,13 +250,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#4</a>
                         </td>
-                        <td>Brantley Mell</td>
-                        <td>Apr 10, 2021</td>
-                        <td>$19</td>
                         <td>
-                            <span class="badge bg-warning">Refunded</span>
+                            <div class="avatar avatar-danger">
+                                <span class="avatar-text rounded-circle">H</span>
+                            </div>
+                        </td>
+                        <td>Horacio Versey</td>
+                        <td>hversey3@illinois.edu</td>
+                        <td>China</td>
+                        <td>1/15/2021</td>
+                        <td>
+                            <span class="badge bg-success">Active</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">
@@ -210,13 +286,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#5</a>
                         </td>
-                        <td>Dominique Enriques</td>
-                        <td>March 5, 2021</td>
-                        <td>$150,00</td>
                         <td>
-                            <span class="badge bg-danger">Cancelled</span>
+                            <div class="avatar avatar-success">
+                                <span class="avatar-text rounded-circle">R</span>
+                            </div>
+                        </td>
+                        <td>Raphael Dampney</td>
+                        <td>rdampney4@reference.com</td>
+                        <td>Portugal</td>
+                        <td>8/17/2020</td>
+                        <td>
+                            <span class="badge bg-success">Active</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">
@@ -240,13 +322,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#6</a>
                         </td>
-                        <td>Cortie Gemson</td>
-                        <td>May 23, 2021</td>
-                        <td>$239,00</td>
                         <td>
-                            <span class="badge bg-primary">Processing</span>
+                            <div class="avatar avatar-info">
+                                <span class="avatar-text rounded-circle">A</span>
+                            </div>
+                        </td>
+                        <td>Arlan Pond</td>
+                        <td>apond0@nytimes.com</td>
+                        <td>Brazil</td>
+                        <td>1/11/2021</td>
+                        <td>
+                            <span class="badge bg-success">Active</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">
@@ -270,13 +358,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#7</a>
                         </td>
-                        <td>Mathilde Tumilson</td>
-                        <td>May 15, 2021</td>
-                        <td>$650,50</td>
                         <td>
-                            <span class="badge bg-dark">Shipped</span>
+                            <div class="avatar avatar-secondary">
+                                <span class="avatar-text rounded-circle">B</span>
+                            </div>
+                        </td>
+                        <td>Billi Cicero</td>
+                        <td>bcicero1@wiley.com</td>
+                        <td>Indonesia</td>
+                        <td>11/20/2020</td>
+                        <td>
+                            <span class="badge bg-danger">Passive</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">
@@ -300,13 +394,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#8</a>
                         </td>
-                        <td>Audrye Heaford</td>
-                        <td>Apr 24, 2021</td>
-                        <td>$100,00</td>
                         <td>
-                            <span class="badge bg-success">Completed</span>
+                            <div class="avatar avatar-warning">
+                                <span class="avatar-text rounded-circle">T</span>
+                            </div>
+                        </td>
+                        <td>Thorpe Hawksley</td>
+                        <td>thawksley2@senate.gov</td>
+                        <td>France</td>
+                        <td>10/20/2020</td>
+                        <td>
+                            <span class="badge bg-success">Active</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">
@@ -330,13 +430,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#9</a>
                         </td>
-                        <td>Brantley Mell</td>
-                        <td>Apr 10, 2021</td>
-                        <td>$19</td>
                         <td>
-                            <span class="badge bg-warning">Refunded</span>
+                            <div class="avatar avatar-danger">
+                                <span class="avatar-text rounded-circle">H</span>
+                            </div>
+                        </td>
+                        <td>Horacio Versey</td>
+                        <td>hversey3@illinois.edu</td>
+                        <td>China</td>
+                        <td>1/15/2021</td>
+                        <td>
+                            <span class="badge bg-success">Active</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">
@@ -360,13 +466,19 @@
                             <input class="form-check-input" type="checkbox">
                         </td>
                         <td>
-                            <a href="#">#3210</a>
+                            <a href="#">#10</a>
                         </td>
-                        <td>Dominique Enriques</td>
-                        <td>March 5, 2021</td>
-                        <td>$150,00</td>
                         <td>
-                            <span class="badge bg-danger">Cancelled</span>
+                            <div class="avatar avatar-success">
+                                <span class="avatar-text rounded-circle">R</span>
+                            </div>
+                        </td>
+                        <td>Raphael Dampney</td>
+                        <td>rdampney4@reference.com</td>
+                        <td>Portugal</td>
+                        <td>8/17/2020</td>
+                        <td>
+                            <span class="badge bg-success">Active</span>
                         </td>
                         <td class="text-end">
                             <div class="d-flex">

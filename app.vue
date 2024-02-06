@@ -1,5 +1,6 @@
 <template>
     <div>
+        <NuxtLoadingIndicator />
         <NuxtLayout>
             <NuxtPage/>
         </NuxtLayout>
@@ -16,11 +17,11 @@ useHead({
         {href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css', rel: 'stylesheet'},
     ],
     script: [
-        {src: './lib/jquery-3.7.1.min.js'},
-        {src: './lib/nicescroll.js'},
-        {src: './lib/charts/apex/apexcharts.min.js'},
-        {src: './assets/examples/dashboard.js'},
-        {src: './assets/app.js'},
+        {src: '/_nuxt/lib/jquery-3.7.1.min.js'},
+        {src: '/_nuxt/lib/nicescroll.js'},
+        {src: '/_nuxt/lib/charts/apex/apexcharts.min.js'},
+        {src: '/_nuxt/assets/examples/dashboard.js'},
+        {src: '/_nuxt/assets/app.js'},
     ]
 })
 

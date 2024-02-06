@@ -486,10 +486,10 @@
         <!-- menu -->
         <div class="menu">
             <div class="menu-header">
-                <a href="/" class="menu-header-logo">
+                <NuxtLink to="/" class="menu-header-logo">
 <!--                    <img src="../logo.svg" alt="logo">-->
                     <span>AdminBold</span>
-                </a>
+                </NuxtLink>
                 <a href="#" class="btn btn-sm menu-close-btn">
                     <i class="bi bi-x"></i>
                 </a>
@@ -498,7 +498,7 @@
                 <div class="dropdown">
                     <a href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
                         <div class="avatar me-3">
-<!--                            <img src="../images/user/man_avatar5.jpg" class="rounded-circle" alt="image">-->
+                            <img src="/assets/images/itsMe.png" class="rounded-circle" alt="image">
                         </div>
                         <div>
                             <div class="fw-bold">Timotheus Bendan</div>
@@ -515,7 +515,7 @@
                         <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
                             <i class="bi bi-gear dropdown-item-icon"></i> Settings
                         </a>
-                        <a href="./login.html" class="dropdown-item d-flex align-items-center text-danger"
+                        <a href="#" class="dropdown-item d-flex align-items-center text-danger"
                            target="_blank">
                             <i class="bi bi-box-arrow-right dropdown-item-icon"></i> Logout
                         </a>
@@ -524,81 +524,59 @@
                 <ul>
                     <li class="menu-divider">Dashboard</li>
                     <li>
-                        <a  class="active"  href="/">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-bar-chart"></i>
-                    </span>
+                        <NuxtLink to="/">
+                            <span class="nav-link-icon">
+                                <i class="bi bi-bar-chart"></i>
+                            </span>
                             <span>Dashboard</span>
-                        </a>
+                        </NuxtLink>
                     </li>
                     <li>
                         <a href="#">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-receipt"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-receipt"></i>
+                            </span>
                             <span>Orders</span>
                         </a>
                         <ul>
                             <li>
-                                <a  href="/orders/list">List</a>
+                                <NuxtLink to="/orders/list">List</NuxtLink>
                             </li>
                             <li>
-                                <a  href="/orders/detail">Detail</a>
+                                <NuxtLink to="/orders/detail">Detail</NuxtLink>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-truck"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-truck"></i>
+                            </span>
                             <span>Products</span>
                         </a>
                         <ul>
                             <li>
-                                <a  href="/products/list">List View</a>
+                                <NuxtLink to="/products/list">List View</NuxtLink>
                             </li>
                             <li>
-                                <a  href="/products/grid">Grid View</a>
+                                <NuxtLink to="/products/grid">Grid View</NuxtLink>
                             </li>
                             <li>
-                                <a  href="/products/detail">Product Detail</a>
+                                <NuxtLink to="/products/detail">Product Detail</NuxtLink>
                             </li>
                             <li>
-                                <a  href="/products/shopping-cart">Shopping Cart</a>
+                                <NuxtLink to="/products/shopping-cart">Shopping Cart</NuxtLink>
                             </li>
                             <li>
-                                <a  href="/products/checkout">Checkout</a>
+                                <NuxtLink to="/products/checkout">Checkout</NuxtLink>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-wallet2"></i>
-                    </span>
-                            <span>Buyer</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a  href="./buyer-dashboard.html">Dashboard</a>
-                            </li>
-                            <li>
-                                <a  href="./buyer-orders.html">Orders</a>
-                            </li>
-                            <li>
-                                <a  href="./buyer-addresses.html">Addresses</a>
-                            </li>
-                            <li>
-                                <a  href="./buyer-wishlist.html">Wishlist</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a  href="./customers.html">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-person-badge"></i>
-                    </span>
+                        <a  href="/customers">
+                            <span class="nav-link-icon">
+                                <i class="bi bi-person-badge"></i>
+                            </span>
                             <span>Customers</span>
                         </a>
                     </li>
@@ -620,60 +598,26 @@
                     </li>
                     <li class="menu-divider">Apps</li>
                     <li>
-                        <a  href="./chats.html">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-chat-square"></i>
-                    </span>
-                            <span>Chats</span>
-                            <span class="badge bg-success rounded-circle ms-auto">2</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./email.html">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-envelope"></i>
-                    </span>
+                        <a href="#">
+                            <span class="nav-link-icon">
+                                <i class="bi bi-envelope"></i>
+                            </span>
                             <span>Email App</span>
                         </a>
                         <ul>
                             <li>
-                                <a  href="./email.html">
+                                <NuxtLink to="./email.html">
                                     <span>Inbox</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a  href="./email.html-detail">
-                                    <span>Detail</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="./todo-list.html">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-check-circle"></i>
-                    </span>
-                            <span>Todo App</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a  href="./todo-list.html">
-                                    <span>List</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a  href="./todo-detail.html">
-                                    <span>Details</span>
-                                </a>
+                                </NuxtLink>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-divider">Pages</li>
                     <li>
                         <a href="#">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-person"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-person"></i>
+                            </span>
                             <span>Profile</span>
                         </a>
                         <ul>
@@ -687,25 +631,25 @@
                     </li>
                     <li>
                         <a href="#">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-person-circle"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-person-circle"></i>
+                            </span>
                             <span>Users</span>
                         </a>
                         <ul>
                             <li>
-                                <a  href="./user-list.html">List View</a>
+                                <a  href="/users/list">List View</a>
                             </li>
                             <li>
-                                <a  href="./user-grid.html">Grid View</a>
+                                <a  href="/users/grid">Grid View</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-lock"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-lock"></i>
+                            </span>
                             <span>Authentication</span>
                         </a>
                         <ul>
@@ -728,9 +672,9 @@
                     </li>
                     <li>
                         <a href="#">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-exclamation-octagon"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-exclamation-octagon"></i>
+                            </span>
                             <span>Error Pages</span>
                         </a>
                         <ul>
@@ -747,61 +691,61 @@
                     </li>
                     <li>
                         <a  href="./settings.html">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-gear"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-gear"></i>
+                            </span>
                             <span>Settings</span>
                         </a>
                     </li>
                     <li>
                         <a  href="./pricing-table.html">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-wallet2"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-wallet2"></i>
+                            </span>
                             <span>Pricing Table</span>
                             <span class="badge bg-success ms-auto">New</span>
                         </a>
                     </li>
                     <li>
-                        <a  href="./search-page.html">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-search"></i>
-                    </span>
+                        <a  href="/search">
+                            <span class="nav-link-icon">
+                                <i class="bi bi-search"></i>
+                            </span>
                             <span>Search Page</span>
                         </a>
                     </li>
                     <li>
                         <a  href="./faq.html">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-question-circle"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </span>
                             <span>FAQ</span>
                         </a>
                     </li>
                     <li class="menu-divider">Other</li>
                     <li>
                         <a target="_blank" href="https://adminbold.com/bootstrap-docs/introduction">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-file-earmark-medical"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-file-earmark-medical"></i>
+                            </span>
                             <span>Documentation</span>
                         </a>
                         <a target="_blank" href="https://github.com/bundui/adminbold">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-github"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-github"></i>
+                            </span>
                             <span>AdminBold Github</span>
                         </a>
                         <a target="_blank" href="https://adminbold.com">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-file-person"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-file-person"></i>
+                            </span>
                             <span>AdminBold About</span>
                         </a>
                         <a target="_blank" href="https://adminbold.com/contact">
-                    <span class="nav-link-icon">
-                        <i class="bi bi-person-raised-hand"></i>
-                    </span>
+                            <span class="nav-link-icon">
+                                <i class="bi bi-person-raised-hand"></i>
+                            </span>
                             <span>Support</span>
                         </a>
                     </li>

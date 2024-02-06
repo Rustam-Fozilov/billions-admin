@@ -7,9 +7,9 @@
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="#">
+                            <NuxtLink to="/">
                                 <i class="bi bi-globe2 small me-2"></i> Dashboard
-                            </a>
+                            </NuxtLink>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">Products</li>
                     </ol>
@@ -17,7 +17,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-8">
+                <div class="col">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-md-flex gap-4 align-items-center">
@@ -45,6 +45,9 @@
                                     </form>
                                 </div>
                                 <div class="dropdown ms-auto">
+                                    <div href="" class="btn btn-primary" style="margin-right: 20px">
+                                        Create book
+                                    </div>
                                     <a href="#" data-bs-toggle="dropdown"
                                        class="btn btn-primary dropdown-toggle"
                                        aria-haspopup="true" aria-expanded="false">Actions</a>
@@ -68,346 +71,35 @@
                                 <th>ID</th>
                                 <th>Photo</th>
                                 <th>Name</th>
-                                <th>Stock</th>
-                                <th>Price</th>
+                                <th>Category</th>
+                                <th>Author</th>
+                                <th>Description</th>
+                                <th>Short description</th>
                                 <th>Created At</th>
                                 <th class="text-end">Actions</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
+                            <tr v-for="book in books">
                                 <td>
                                     <input class="form-check-input" type="checkbox">
                                 </td>
                                 <td>
-                                    <a href="#">#1</a>
+                                    <a href="#">{{ book.id }}</a>
                                 </td>
                                 <td>
                                     <a href="#">
-<!--                                        <img src="../images/products/1.jpg" class="rounded" width="40" alt="...">-->
+                                        <img src="/assets/images/itsMe.png" class="rounded" width="40" alt="...">
                                     </a>
                                 </td>
-                                <td>Headphone</td>
+                                <td>{{ book.name.ru }}</td>
                                 <td>
-                                    <span class="text-success">In Stock</span>
+                                    <span class="text-success">{{ book.category.name.ru }}</span>
                                 </td>
                                 <td>$499,90</td>
-                                <td>02/03/2021</td>
-                                <td class="text-end">
-                                    <div class="d-flex">
-                                        <div class="dropdown ms-auto">
-                                            <a href="#" data-bs-toggle="dropdown"
-                                               class="btn btn-floating"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="form-check-input" type="checkbox">
-                                </td>
-                                <td>
-                                    <a href="#">#2</a>
-                                </td>
-                                <td>
-                                    <a href="#">
-<!--                                        <img src="../images/products/2.jpg" class="rounded" width="40" alt="...">-->
-                                    </a>
-                                </td>
-                                <td>Shoe</td>
-                                <td>
-                                    <span class="text-success">In Stock</span>
-                                </td>
-                                <td>$500,30</td>
-                                <td>19/04/2021</td>
-                                <td class="text-end">
-                                    <div class="d-flex">
-                                        <div class="dropdown ms-auto">
-                                            <a href="#" data-bs-toggle="dropdown"
-                                               class="btn btn-floating"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="form-check-input" type="checkbox">
-                                </td>
-                                <td>
-                                    <a href="#">#3</a>
-                                </td>
-                                <td>
-                                    <a href="#">
-<!--                                        <img src="../images/products/3.jpg" class="rounded" width="40" alt="...">-->
-                                    </a>
-                                </td>
-                                <td>Digital clock</td>
-                                <td>
-                                    <span class="text-danger">Out of Stock</span>
-                                </td>
-                                <td>$1.190,90</td>
-                                <td>30/05/2021</td>
-                                <td class="text-end">
-                                    <div class="d-flex">
-                                        <div class="dropdown ms-auto">
-                                            <a href="#" data-bs-toggle="dropdown"
-                                               class="btn btn-floating"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="form-check-input" type="checkbox">
-                                </td>
-                                <td>
-                                    <a href="#">#4</a>
-                                </td>
-                                <td>
-                                    <a href="#">
-<!--                                        <img src="../images/products/4.jpg" class="rounded" width="40" alt="...">-->
-                                    </a>
-                                </td>
-                                <td>Toy car</td>
-                                <td>
-                                    <span class="text-success">In Stock</span>
-                                </td>
-                                <td>$50,90</td>
-                                <td>25/03/2021</td>
-                                <td class="text-end">
-                                    <div class="d-flex">
-                                        <div class="dropdown ms-auto">
-                                            <a href="#" data-bs-toggle="dropdown"
-                                               class="btn btn-floating"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="form-check-input" type="checkbox">
-                                </td>
-                                <td>
-                                    <a href="#">#5</a>
-                                </td>
-                                <td>
-                                    <a href="#">
-<!--                                        <img src="../images/products/5.jpg" class="rounded" width="40" alt="...">-->
-                                    </a>
-                                </td>
-                                <td>Sunglasses</td>
-                                <td>
-                                    <span class="text-success">In Stock</span>
-                                </td>
-                                <td>$50,90</td>
-                                <td>28/03/2021</td>
-                                <td class="text-end">
-                                    <div class="d-flex">
-                                        <div class="dropdown ms-auto">
-                                            <a href="#" data-bs-toggle="dropdown"
-                                               class="btn btn-floating"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="form-check-input" type="checkbox">
-                                </td>
-                                <td>
-                                    <a href="#">#6</a>
-                                </td>
-                                <td>
-                                    <a href="#">
-<!--                                        <img src="../images/products/6.jpg" class="rounded" width="40" alt="...">-->
-                                    </a>
-                                </td>
-                                <td>Cake</td>
-                                <td>
-                                    <span class="text-danger">Out of Stock</span>
-                                </td>
-                                <td>$10,50</td>
-                                <td>05/04/2021</td>
-                                <td class="text-end">
-                                    <div class="d-flex">
-                                        <div class="dropdown ms-auto">
-                                            <a href="#" data-bs-toggle="dropdown"
-                                               class="btn btn-floating"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="form-check-input" type="checkbox">
-                                </td>
-                                <td>
-                                    <a href="#">#7</a>
-                                </td>
-                                <td>
-                                    <a href="#">
-<!--                                        <img src="../images/products/7.jpg" class="rounded" width="40" alt="...">-->
-                                    </a>
-                                </td>
-                                <td>Glass</td>
-                                <td>
-                                    <span class="text-success">In Stock</span>
-                                </td>
-                                <td>$70,20</td>
-                                <td>22/04/2021</td>
-                                <td class="text-end">
-                                    <div class="d-flex">
-                                        <div class="dropdown ms-auto">
-                                            <a href="#" data-bs-toggle="dropdown"
-                                               class="btn btn-floating"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="form-check-input" type="checkbox">
-                                </td>
-                                <td>
-                                    <a href="#">#8</a>
-                                </td>
-                                <td>
-                                    <a href="#">
-<!--                                        <img src="../images/products/8.jpg" class="rounded" width="40" alt="...">-->
-                                    </a>
-                                </td>
-                                <td>Headphone</td>
-                                <td>
-                                    <span class="text-success">In Stock</span>
-                                </td>
-                                <td>$870,50</td>
-                                <td>24/04/2021</td>
-                                <td class="text-end">
-                                    <div class="d-flex">
-                                        <div class="dropdown ms-auto">
-                                            <a href="#" data-bs-toggle="dropdown"
-                                               class="btn btn-floating"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="form-check-input" type="checkbox">
-                                </td>
-                                <td>
-                                    <a href="#">#9</a>
-                                </td>
-                                <td>
-                                    <a href="#">
-<!--                                        <img src="../images/products/9.jpg" class="rounded" width="40" alt="...">-->
-                                    </a>
-                                </td>
-                                <td>Perfume</td>
-                                <td>
-                                    <span class="text-success">In Stock</span>
-                                </td>
-                                <td>$170,50</td>
-                                <td>24/04/2021</td>
-                                <td class="text-end">
-                                    <div class="d-flex">
-                                        <div class="dropdown ms-auto">
-                                            <a href="#" data-bs-toggle="dropdown"
-                                               class="btn btn-floating"
-                                               aria-haspopup="true" aria-expanded="false">
-                                                <i class="bi bi-three-dots"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="#" class="dropdown-item">Action</a>
-                                                <a href="#" class="dropdown-item">Another action</a>
-                                                <a href="#" class="dropdown-item">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="form-check-input" type="checkbox">
-                                </td>
-                                <td>
-                                    <a href="#">#10</a>
-                                </td>
-                                <td>
-                                    <a href="#">
-<!--                                        <img src="../images/products/10.jpg" class="rounded" width="40" alt="...">-->
-                                    </a>
-                                </td>
-                                <td>Cookie</td>
-                                <td>
-                                    <span class="text-success">In Stock</span>
-                                </td>
-                                <td>$15,00</td>
-                                <td>24/04/2021</td>
+                                <td>{{ 'description' }}</td>
+                                <td>{{ 'short_description' }}</td>
+                                <td>{{ book.created_at }}</td>
                                 <td class="text-end">
                                     <div class="d-flex">
                                         <div class="dropdown ms-auto">
@@ -446,120 +138,6 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-md-4">
-                    <h5 class="mb-4">Filter Products</h5>
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-                                 aria-expanded="true" data-bs-target="#keywordsCollapseExample" role="button">
-                                <div>Keywords</div>
-                                <div class="bi bi-chevron-down"></div>
-                            </div>
-                            <div class="collapse show mt-4" id="keywordsCollapseExample">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Phone, Headphone, Shoe ...">
-                                    <button class="btn btn-outline-light" type="button">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-                                 aria-expanded="true" data-bs-target="#categoriesCollapseExample" role="button">
-                                <div>Categories</div>
-                                <div class="bi bi-chevron-down"></div>
-                            </div>
-                            <div class="collapse show mt-4" id="categoriesCollapseExample">
-                                <div class="d-flex flex-column gap-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="categoryCheck1">
-                                        <label class="form-check-label" for="categoryCheck1">
-                                            All
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="categoryCheck2">
-                                        <label class="form-check-label" for="categoryCheck2">
-                                            Accessories
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="categoryCheck3">
-                                        <label class="form-check-label" for="categoryCheck3">
-                                            Phone
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="categoryCheck4">
-                                        <label class="form-check-label" for="categoryCheck4">
-                                            Headphone
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="categoryCheck5">
-                                        <label class="form-check-label" for="categoryCheck5">
-                                            Camera
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-                                 aria-expanded="true" data-bs-target="#priceCollapseExample" role="button">
-                                <div>Price</div>
-                                <div class="bi bi-chevron-down"></div>
-                            </div>
-                            <span class="irs irs--round js-irs-0 irs-with-grid">
-                                <span class="irs">
-                                    <span class="irs-line" tabindex="0"></span><span class="irs-min" style="visibility: hidden;">$1</span><span class="irs-max" style="visibility: hidden;">$1 000</span>
-                                    <span class="irs-from" style="visibility: visible; left: 7.16401%;">$97</span><span class="irs-to" style="visibility: visible; left: 71.9078%;">$818</span>
-                                    <span class="irs-single" style="visibility: hidden; left: 31.6347%;">$97 — $818</span>
-                                </span>
-                                <span class="irs-grid" style="width: 91.5983%; left: 4.10086%;">
-                                    <span class="irs-grid-pol" style="left: 0;"></span><span class="irs-grid-text js-grid-text-0" style="left: 0; margin-left: -2.31649%;">1</span><span class="irs-grid-pol small" style="left: 20%;"></span>
-                                    <span class="irs-grid-pol small" style="left: 15%;"></span><span class="irs-grid-pol small" style="left: 10%;"></span><span class="irs-grid-pol small" style="left: 5%;"></span><span class="irs-grid-pol" style="left: 25%;"></span>
-                                    <span class="irs-grid-text js-grid-text-1" style="left: 25%; visibility: visible; margin-left: -4.84903%;">251</span><span class="irs-grid-pol small" style="left: 45%;"></span>
-                                    <span class="irs-grid-pol small" style="left: 40%;"></span><span class="irs-grid-pol small" style="left: 35%;"></span><span class="irs-grid-pol small" style="left: 30%;"></span><span class="irs-grid-pol" style="left: 50%;"></span>
-                                    <span class="irs-grid-text js-grid-text-2" style="left: 50%; visibility: visible; margin-left: -4.84903%;">501</span><span class="irs-grid-pol small" style="left: 70%;"></span>
-                                    <span class="irs-grid-pol small" style="left: 65%;"></span><span class="irs-grid-pol small" style="left: 60%;"></span><span class="irs-grid-pol small" style="left: 55%;"></span><span class="irs-grid-pol" style="left: 75%;"></span>
-                                    <span class="irs-grid-text js-grid-text-3" style="left: 75%; visibility: visible; margin-left: -4.84903%;">750</span><span class="irs-grid-pol small" style="left: 95%;"></span>
-                                    <span class="irs-grid-pol small" style="left: 90%;"></span><span class="irs-grid-pol small" style="left: 85%;"></span><span class="irs-grid-pol small" style="left: 80%;"></span><span class="irs-grid-pol" style="left: 100%;"></span>
-                                    <span class="irs-grid-text js-grid-text-4" style="left: 100%; margin-left: -6.74708%;">1 000</span>
-                                </span>
-                                <span class="irs-bar" style="left: 13.0031%; width: 66.1085%;"></span><span class="irs-shadow shadow-from" style="display: none;"></span><span class="irs-shadow shadow-to" style="display: none;"></span>
-                                <span class="irs-handle from" style="left: 8.80224%;"><i></i><i></i><i></i></span><span class="irs-handle to type_last" style="left: 74.9107%;"><i></i><i></i><i></i></span>
-                            </span>
-                            <div class="collapse show mt-4" id="priceCollapseExample">
-                                <input id="price-filter" class="irs-hidden-input" tabindex="-1" readonly="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-                                 aria-expanded="true" data-bs-target="#colorsCollapseExample" role="button">
-                                <div>Colors</div>
-                                <div class="bi bi-chevron-down"></div>
-                            </div>
-                            <div class="collapse show mt-4" id="colorsCollapseExample">
-                                <div class="color-filter-group d-flex gap-3">
-                                    <input class="form-check-input" type="checkbox" value="#1fa0c6" aria-label="...">
-                                    <input class="form-check-input" type="checkbox" checked value="green" aria-label="...">
-                                    <input class="form-check-input" type="checkbox" checked value="#c61faa" aria-label="...">
-                                    <input class="form-check-input" type="checkbox" value="#1fc662" aria-label="...">
-                                    <input class="form-check-input" type="checkbox" value="#9dc61f" aria-label="...">
-                                    <input class="form-check-input" type="checkbox" checked value="#c67b1f" aria-label="...">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -568,5 +146,20 @@
 </template>
 
 <script setup>
+import axios from "axios"
+
+const books = ref(null)
+const config = useRuntimeConfig()
+
+onMounted(async () => {
+    await axios
+        .get(config.public.serverUrl + '/books')
+        .then(res => {
+            books.value = res.data.data
+        })
+        .catch(e => {
+            console.log(e)
+        })
+})
 
 </script>
