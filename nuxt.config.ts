@@ -11,5 +11,8 @@ export default defineNuxtConfig({
     public: {
       serverUrl: process.env.NUXT_SERVER_URL
     }
-  }
+  },
+  plugins: [
+    '~/plugins/maska'
+  ]
 })

@@ -13,7 +13,7 @@ $(function () {
         }
     });
 
-    $(document).on('click', '#products input[type="checkbox"]', function () {
+    $(document).on('click', '#books input[type="checkbox"]', function () {
         let that = $(this);
 
         if (that.prop('checked')) {

@@ -39,7 +39,7 @@ $(function () {
         }
     });
 
-    $(document).on('click', '#recent-products input[type="checkbox"]', function () {
+    $(document).on('click', '#recent-books input[type="checkbox"]', function () {
         const that = $(this);
 
         if (that.prop('checked')) {
@@ -310,7 +310,7 @@ $(function () {
     salesChannels();
 
     function productsSold() {
-        if ($('#products-sold').length) {
+        if ($('#books-sold').length) {
             const options = {
                 series: [{
                     name: 'Sales',
@@ -378,7 +378,7 @@ $(function () {
                 }
             };
 
-            new ApexCharts(document.querySelector('#products-sold'), options).render();
+            new ApexCharts(document.querySelector('#books-sold'), options).render();
         }
     }
 

@@ -45,9 +45,9 @@
                                     </form>
                                 </div>
                                 <div class="dropdown ms-auto">
-                                    <div href="" class="btn btn-primary" style="margin-right: 20px">
+                                    <NuxtLink to="/products/create" class="btn btn-primary" style="margin-right: 20px">
                                         Create book
-                                    </div>
+                                    </NuxtLink>
                                     <a href="#" data-bs-toggle="dropdown"
                                        class="btn btn-primary dropdown-toggle"
                                        aria-haspopup="true" aria-expanded="false">Actions</a>
@@ -72,9 +72,8 @@
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>Category</th>
+                                <th>Price</th>
                                 <th>Author</th>
-                                <th>Description</th>
-                                <th>Short description</th>
                                 <th>Created At</th>
                                 <th class="text-end">Actions</th>
                             </tr>
@@ -96,9 +95,8 @@
                                 <td>
                                     <span class="text-success">{{ book.category.name.ru }}</span>
                                 </td>
-                                <td>$499,90</td>
-                                <td>{{ 'description' }}</td>
-                                <td>{{ 'short_description' }}</td>
+                                <td>{{ book.prices[1].price }} so'm</td>
+                                <td>{{ book.author.first_name.ru }} {{ book.author.last_name.ru }}</td>
                                 <td>{{ book.created_at }}</td>
                                 <td class="text-end">
                                     <div class="d-flex">
@@ -153,7 +151,7 @@ const config = useRuntimeConfig()
 
 onMounted(async () => {
     await axios
-        .get(config.public.serverUrl + '/books')
+        .get(config.public.serverUrl + '/books?withAuthor=true')
         .then(res => {
             books.value = res.data.data
         })

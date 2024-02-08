@@ -505,7 +505,7 @@
                                         </td>
                                         <td>
                                             <a href="#">
-<!--                                                <img src="../images/products/10.jpg" class="rounded" width="40" alt="...">-->
+<!--                                                <img src="../images/books/10.jpg" class="rounded" width="40" alt="...">-->
                                             </a>
                                         </td>
                                         <td>Cookie</td>
@@ -536,7 +536,7 @@
                                         </td>
                                         <td>
                                             <a href="#">
-<!--                                                <img src="../images/products/7.jpg" class="rounded" width="40" alt="...">-->
+<!--                                                <img src="../images/books/7.jpg" class="rounded" width="40" alt="...">-->
                                             </a>
                                         </td>
                                         <td>Glass</td>
@@ -567,7 +567,7 @@
                                         </td>
                                         <td>
                                             <a href="#">
-<!--                                                <img src="../images/products/8.jpg" class="rounded" width="40" alt="...">-->
+<!--                                                <img src="../images/books/8.jpg" class="rounded" width="40" alt="...">-->
                                             </a>
                                         </td>
                                         <td>Headphone</td>
@@ -598,7 +598,7 @@
                                         </td>
                                         <td>
                                             <a href="#">
-<!--                                                <img src="../images/products/9.jpg" class="rounded" width="40" alt="...">-->
+<!--                                                <img src="../images/books/9.jpg" class="rounded" width="40" alt="...">-->
                                             </a>
                                         </td>
                                         <td>Perfume</td>

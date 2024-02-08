@@ -22,6 +22,10 @@ useHead({
         {src: '/_nuxt/lib/charts/apex/apexcharts.min.js'},
         {src: '/_nuxt/assets/examples/dashboard.js'},
         {src: '/_nuxt/assets/app.js'},
+        // {src: '/_nuxt/node_modules/inputmask/dist/inputmask/dependencyLibs/inputmask.dependencyLib.js'},
+        // {src: '/_nuxt/node_modules/inputmask/dist/inputmask/inputmask.js'},
+        // {src: '/_nuxt/node_modules/inputmask/dist/vue-inputmask-browser.js'},
+        // {src: '/_nuxt/lib/input-mask/jquery.mask.js'},
     ]
 })
 

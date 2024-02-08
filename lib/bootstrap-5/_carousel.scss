@@ -1,6 +1,6 @@
 // Notes on the classes:
 //
-// 1. .carousel.pointer-event should ideally be pan-y (to allow for users to scroll vertically)
+// 1. .carousel.pointer-event should ideally be pan-y (to allow for customers to scroll vertically)
 //    even when their scroll action started on a carousel, but for compatibility (with Firefox)
 //    we're preventing all actions instead
 // 2. The .carousel-item-start and .carousel-item-end is used to indicate where
